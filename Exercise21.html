@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Float and Inline-Block Example</title>
+<style>
+    /* 頁面基本設定 */
+    body {
+        font-family: "Times New Roman", Times, serif; /* 圖片中使用的字體風格 */
+        background-color: #f4f4f4;
+        padding: 40px;
+    }
+
+    /* 外層的白色卡片容器 */
+    .container {
+        background-color: #ffffff;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px 30px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2); /* 模擬圖片中的陰影效果 */
+        line-height: 1.5;
+        font-size: 16px;
+    }
+
+    /* 右側浮動區塊設定 (A float div with overflow auto) */
+    .float-box {
+        float: right; /* 讓區塊靠右浮動 */
+        width: 130px;
+        height: 110px;
+        border: 3px solid #7cb342; /* 綠色邊框 */
+        overflow: auto; /* 內容過多時自動顯示捲軸 */
+        margin-left: 15px; /* 確保與左側文字保持距離 */
+        margin-bottom: 5px;
+        padding: 8px;
+    }
+
+    /* 行內區塊設定 (Some inline-blocks) */
+    .highlight-box {
+        display: inline-block; /* 設為 inline-block 才能正確顯示邊框與背景，且不換行 */
+        background-color: yellow;
+        border: 1px solid blue;
+        padding: 0 4px;
+        margin: 0 2px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="float-box">
+        A float div with overflow auto. A float div with overflow auto. A float div with overflow auto.
+    </div>
+    
+    <p>
+        (Just long sentence.) Let me not to the marriage of true minds Admit impediments. 
+        <span class="highlight-box">Love</span> is not love Which alters when it alteration finds, Or bends with the remover to remove: O, no! it is an ever-fix`ed mark, That looks on tempests and is never shaken; It is the star to every wand'ring bark, Whose worth's unknown, although his heighth be taken. 
+        <span class="highlight-box">Love's</span> not Time's fool, though rosy lips and cheeks Within his bending sickle's compass come; 
+        <span class="highlight-box">Love</span> alters not with his brief hours and weeks, But bears it out even to the edge of doom. If this be error and upon me proved, I never writ, nor no man ever loved.
+    </p>
+</div>
+
+</body>
+</html>

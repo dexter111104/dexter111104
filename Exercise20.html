@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and Fixed Div</title>
+    <style>
+        /* 設定表格樣式 */
+        table {
+            border-collapse: collapse; /* 讓邊框合併成單一線條 */
+            width: 150px;
+            font-family: serif; /* 圖片中的字體偏向襯線體 */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* 標題列背景為深灰色，文字為白色 */
+        th {
+            background-color: #666666;
+            color: white;
+        }
+
+        /* 奇數資料列（第一、三列）背景為黃色 */
+        tr.yellow-row {
+            background-color: yellow;
+        }
+
+        /* 設定固定位置的 Div 樣式 */
+        .fixed-box {
+            position: fixed; /* 固定位置 */
+            top: 50px;       /* 距離頂部 */
+            right: 50px;     /* 距離右側 */
+            border: 3px solid #6b8e23; /* 綠色邊框 */
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+            background-color: white; /* 確保背景為白色，不會透明化 */
+            font-family: serif;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr class="yellow-row">
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr class="yellow-row">
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <div class="fixed-box">
+        This div element has position: fixed;
+    </div>
+
+</body>
+</html>
