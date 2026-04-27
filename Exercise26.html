@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 26</title>
+    <style>
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .img-left {
+            width: 33%;
+            height: 300px; 
+            border-radius: 18px;
+            object-fit: cover; 
+        }
+
+        .img-center {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; 
+            border: 1px solid #333; 
+            object-fit: cover;
+        }
+
+        .img-right {
+            width: 33%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/dexter111104/web-programming/main/tower.jpg" alt="巴黎鐵塔" class="img-left">
+
+        <img src="https://raw.githubusercontent.com/dexter111104/web-programming/main/river.jpeg" alt="風景 (無變形)" class="img-center">
+
+        <img src="https://raw.githubusercontent.com/dexter111104/web-programming/main/tower.jpg" alt="巴黎鐵塔 (有變形)" class="img-right">
+    </div>
+
+</body>
+</html>
