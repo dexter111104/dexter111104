@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 27</title>
+<style>
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 區塊之間的垂直間距 */
+  }
+
+  /* 頂部區塊 (綠色) */
+  .top-box {
+    background-color: #a4ce4e;
+    height: 120px;
+  }
+
+  /* 中間區塊容器 (大於等於 480px 時為 3 欄) */
+  .middle-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  /* 中間子區塊 (青藍色) */
+  .middle-box {
+    background-color: #12bad6;
+    height: 120px;
+  }
+
+  /* 底部區塊容器 (大於等於 480px 時為 4 欄) */
+  .bottom-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  /* 底部子區塊 (淺灰色) */
+  .bottom-box {
+    background-color: #eaeded;
+    height: 60px;
+  }
+
+  @media (max-width: 479px) {
+    /* 中間區塊變成 1 欄 (垂直堆疊) */
+    .middle-section {
+      grid-template-columns: 1fr;
+    }
+    
+    /* 稍微縮小中間區塊堆疊時的高度 */
+    .middle-box {
+      height: 60px;
+    }
+
+    /* 底部區塊變成 2 欄 (2x2 網格) */
+    .bottom-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="top-box"></div>
+
+    <div class="middle-section">
+      <div class="middle-box"></div>
+      <div class="middle-box"></div>
+      <div class="middle-box"></div>
+    </div>
+
+    <div class="bottom-section">
+      <div class="bottom-box"></div>
+      <div class="bottom-box"></div>
+      <div class="bottom-box"></div>
+      <div class="bottom-box"></div>
+    </div>
+  </div>
+
+</body>
+</html>
