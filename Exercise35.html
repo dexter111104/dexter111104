@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 35</title>
+  <style>
+    body { font-family: Arial, sans-serif}
+  </style>
+</head>
+<body>
+  <h2>All Properties of Person Object:</h2>
+  <pre id="allProps"></pre>
+
+  <h2>Person Object After Deleting "age":</h2>
+  <pre id="afterDelete"></pre>
+
+  <script>
+    var Person = {
+      firstName: "Tony",
+      lastName: "Lee",
+      age: 50,
+      eyeColor: "Blue"
+    };
+
+    // List all properties
+    var propList = "";
+    for (var key in Person) {
+      propList += key + " : " + Person[key] + "\n";
+    }
+    document.getElementById("allProps").textContent = propList;
+
+    // Delete age property
+    delete Person.age;
+
+    // Print object after deletion
+    var afterList = "";
+    for (var key in Person) {
+      afterList += key + " : " + Person[key] + "\n";
+    }
+    document.getElementById("afterDelete").textContent = afterList;
+  </script>
+</body>
+</html>
