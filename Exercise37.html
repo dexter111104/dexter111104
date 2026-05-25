@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Calculator</title>
+</head>
+<body>
+    <h1>Circle Calculator</h1>
+
+    <label for="radius">Enter radius:</label>
+    <input type="number" id="radius" value="5">
+    <br><br>
+    <button onclick="calcCircumfrence(document.getElementById('radius').value)">Calculate Circumference</button>
+    <button onclick="calcArea(document.getElementById('radius').value)">Calculate Area</button>
+
+    <p id="output"></p>
+
+    <script>
+        function calcCircumfrence(radius) {
+            var circumference = 2 * Math.PI * radius;
+            document.getElementById("output").textContent = "The circumference is " + circumference.toFixed(2);
+        }
+
+        function calcArea(radius) {
+            var area = Math.PI * radius * radius;
+            document.getElementById("output").textContent = "The area is " + area.toFixed(2);
+        }
+    </script>
+</body>
+</html>
